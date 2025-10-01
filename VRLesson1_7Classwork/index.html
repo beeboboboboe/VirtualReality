@@ -6,7 +6,12 @@
     <a-scene>
       <a-assets>
         <img id="texture" src="pacman_maze.jpg" />
+
       </a-assets>
+      <a-entity>
+      <a-sphere phi-start="0" phi-length="320" color="yellow" position="0 2 -4" side="double" rotation="90 0 0"></a-sphere>
+      <a-circle side="double" position="0 1 -4" rotation="0 -90 -50"></a-circle>
+      </a-entity>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="20" height="20" repeat="5 5" src="#texture"></a-plane>
       <a-sky color="black"></a-sky>
     </a-scene>
