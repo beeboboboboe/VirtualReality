@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded",function() {
 let scene=document.querySelector("a-scene");
 
   //Challenge 2: Create a variable for <a-dodecahedron> and create it.
-let dodecahedron=document.querySelector("a-dodecahedron");
+let dodecahedron=document.createElement("a-dodecahedron");
   
   //Challenge 3: Change the <a-dodecahedron>'s position, radius and color
 dodecahedron.setAttribute("position", {x:3, y:2, z:4});
