@@ -17,7 +17,10 @@ pokeball.dx=.1;
 rocket.y=1;
 rocket.dy=.01;
 dude.s=0;
-dude.ds=.01
+dude.ds=.01;
+sun.o=2;
+sun.do=-0.007;
+
 
 loop()
 })
@@ -31,7 +34,9 @@ pokeball.setAttribute("rotation", {x:pokeball.x, y:0, z:-5});
 rocket.y+=rocket.dy;
 rocket.setAttribute("position", {x:4, y:rocket.y, z:-4});
 dude.s+=dude.ds;
-dude.setAttribute("scale", {})
+dude.setAttribute("scale", {x:1, y:dude.s, z:1});
+sun.o+=sun.do;
+sun.setAttribute("opacity", sun.o);
 
 
 
