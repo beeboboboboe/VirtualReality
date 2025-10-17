@@ -77,14 +77,17 @@ function createHouse(x, y, z){
 let base=document.createElement("a-box");
 let roof=document.createElement("a-cylinder");
 let house=document.createElement("a-entity");
-roof.setAttribute("position", "0 2.25 0");
+roof.setAttribute("position", "0 2.20 0");
 base.setAttribute("position", "0 1 0");
 base.setAttribute("depth", "1.5");
 base.setAttribute("height", "1.5");
 base.setAttribute("width", "1.5");
+base.setAttribute("color", "red")
 roof.setAttribute("segments-radial", "3");
-roof.setAttribute("radius", "1");
-roof.setAttribute("rotation", "90 0 0");
+roof.setAttribute("radius", ".9");
+roof.setAttribute("color", "red")
+roof.setAttribute("rotation", "90 0 0 ");
+roof.setAttribute("rotation", "-90 0 180 ");
 house.append(roof);
 house.append(base);
 house.setAttribute("position", {x:x, y:y, z:z});
