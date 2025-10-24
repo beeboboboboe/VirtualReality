@@ -57,9 +57,11 @@ function loop(){
   cloud.fly();
   //Challenge 2: Traverse your array of clouds and make each cloud fly
 for(c of clouds){
-  c.fly()
+  c.fly();
 }
   //Challenge 4: Traverse your array of snowflakes and make each snowflake fall
-  
+  for(s of snowflakes){
+    s.fall();
+  }
   window.requestAnimationFrame( loop );
 }
