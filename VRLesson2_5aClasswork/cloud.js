@@ -1,7 +1,7 @@
 class Cloud{
   constructor(y,z){
     // Challenge 1: Create animation variables  x and dx for the Cloud to fly.  Set them to appropriate values.
-    this.x=x;
+
     this.y=y;
     this.z= z;
     this.x=0;
