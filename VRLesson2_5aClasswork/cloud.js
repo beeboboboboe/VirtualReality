@@ -1,5 +1,5 @@
 class Cloud{
-  constructor(y,z){
+  constructor(x,y,z){
     // Challenge 1: Create animation variables  x and dx for the Cloud to fly.  Set them to appropriate values.
 
     this.y=y;
@@ -22,7 +22,7 @@ class Cloud{
  
 fly(){
 this.x+=this.dx;
-this.obj.setAttribute("position", {x:0, y:this.p, z:0});
+this.obj.setAttribute("position", {x:0, y:this.x, z:0});
 }
 
 }
