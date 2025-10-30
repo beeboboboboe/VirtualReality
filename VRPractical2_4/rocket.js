@@ -23,14 +23,14 @@ this.obj.append( tip );
 
 
 scene.append( this.obj );
-this.obj.setAttribute("position", {x:0, y:-4, z:0});
+this.obj.setAttribute("position", {x:x, y:y, z:z});
 
 
  }
  
 launch(){
 this.y+=this.dy;
-this.obj.setAttribute("position",{x:0, y:this.y, z:0});
+this.obj.setAttribute("position",{x:this.x, y:this.y, z:this.z});
 
 }
 

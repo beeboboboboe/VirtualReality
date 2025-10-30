@@ -3,7 +3,7 @@ constructor(x,y,z){
 this.x = x;
 this.y = y;
 this.z = z;
-this.y = 0;
+this.y = 20;
 this.dy = rnd(1,10)/100;
 
 this.obj = document.createElement("a-entity");
@@ -40,9 +40,14 @@ this.obj.append( hatch );
 
 
 scene.append( this.obj );
-this.obj.setAttribute("position", {x:0, y:2.7, z:-4});
+this.obj.setAttribute("position", {x:x, y:y, z:z});
 
 }
+invade(){
+this.y+=this.dy;
+this.obj.setAttribute("position", {x:this.x, y:this.y, z:this.z})
 
+
+}
 
 }
