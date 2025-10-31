@@ -4,7 +4,7 @@ this.x = x;
 this.y = y;
 this.z = z;
 this.y = 20;
-this.dy = rnd(1,10)/100;
+this.dy = rnd(-1,-4)/10000;
 
 this.obj = document.createElement("a-entity");
 
