@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded",function() {
   for(let i=0;i<100;i++){
 x=rnd(-20, 20);
 z=rnd(-20, 20);
- let m=new Mech(x, 0, z);
+ let m=new Mech(x, 13, z);
  mechs.push(m);
 }
   loop();
