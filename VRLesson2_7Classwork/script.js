@@ -1,7 +1,7 @@
 let rnd = (l,u) => Math.floor(Math.random()*(u-l) + l);
 let scene, dudeTemplate;
 
-dudes=[];
+let dudes=[];
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   dudeTemplate = document.querySelector("#dudeTemplate");
