@@ -3,17 +3,18 @@ let target;
 window.addEventListener("DOMContentLoaded",function() {
   target = document.querySelector("#target");
   target.a = 0;
-  target.da = -1;
+  target.da = -0.5;
 
   loop();
 })
 
 function loop(){
   target.a += target.da;
-
+target.object3D.rotation.x=target.a;
   target.setAttribute("rotation",{x:target.a, y:0, z: 0});
-if(target.a>0 || target.a>Math.PI/2){
-target.da=-target.da
+  
+if(target.a<=-90 || target.a>=20){
+target.da*=0;
 }
 
 
