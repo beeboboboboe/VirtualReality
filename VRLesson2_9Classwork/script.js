@@ -1,16 +1,16 @@
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "xxxxxxxxxxxxxxxxxx-------",
+  "---ooo---o----o--x-----",
+  "--------xxxxxx---x-----",
+  "-oooxxxxx----x---x-----",
+  "xxxxx------xxx---x-----",
+  "-----------xx-o-xx-",
+  "-------xxxxx---xx------",
+  "-------oooo----x-------",
+  "-------xxxxxxxxx-------",
+  "TTTTTTTTTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTTTTTTTTT",
 ];
 let scene;
 
@@ -24,9 +24,9 @@ window.addEventListener("DOMContentLoaded",function() {
         new Block(c,1,r)
       }
       else if(cols[c] == "T"){
-        new Tree(c,1,r);
+        new Tree(c*1.1,1,r);
       }else if(cols[c]=="o"){
-        new Rock(c,1,r)
+        new Rock(c,0,r)
       }
     }
 
