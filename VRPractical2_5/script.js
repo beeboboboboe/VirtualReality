@@ -29,10 +29,13 @@ let maze = [
    Add appropriate classes to use as objects in your map.  Choose characters to represent these objects and position them on the map.   In Challenge 5 and 6, you will generate the map using the character representation of the objects you chose to place in the world. Get Creative!
 */
 
-let scene;
+let scene, wall, turn, turn2, spikes, pallets;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
+
+  new Wall(0, 0, 0);
+  new Turn(0, 0, -4);
   for(let r = 0; r < maze.length; r++){
     /* Challenge 3
       Choose a technique to traverse the each character in the string.
