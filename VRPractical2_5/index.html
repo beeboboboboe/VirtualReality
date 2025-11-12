@@ -2,23 +2,20 @@
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="script.js"></script>
-      <script src="wall.js"></script>
-    <script src="spikes.js"></script>
+    <script src="wall.js"></script>
+    <script src="spike.js"></script>
     <script src="pallet.js"></script>
-    <script src="turn.js"></script>    
-    <script src="turn2.js"></script>    
+  
     </head>
   <body>
     <a-scene>
       <a-assets>
-        <!-- Challenge
-             Upload a picture to use as the texture for the walls of your maze if you want
-        -->
+<img id="darkwall" src="dark-red-brick-wall-texture.jpg">
       </a-assets>
       <a-plane position="0 0 0" rotation="-90 0 0" width="150" height="150" color="#AAFFAA"></a-plane>
       
       
       <a-sky color="blue"></a-sky>
-      <a-camera position="0 1.3 0"> 
+      <a-camera wasd-controls="acceleration: 100; fly: true" position=" 0 25 0">
       </a-camera>
 </html>

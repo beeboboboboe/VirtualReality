@@ -4,12 +4,13 @@ class Wall{
         y=y;
         z=z;
         this.obj=document.createElement("a-box");
-        this.obj.setAttribute("height", "7");
+        this.obj.setAttribute("height", "8");
         this.obj.setAttribute("width", "1");
         this.obj.setAttribute("depth", "1");
-        this.obj.setAttribute("rotation","0 0 -45")
+        this.obj.setAttribute("rotation","0, 90, 0");
+        this.obj.setAttribute("src", "#darkwall")
         scene.append( this.obj );
-        this.obj.setAttribute("position", {x:x, y:y+3, z:z})
+        this.obj.setAttribute("position", {x:x, y:y, z:z})
 }
 
 

@@ -11,39 +11,61 @@
 */
 
 let maze = [
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
-  "----------------------",
+  "---WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
+  "---W-----W--------W--------W-----------------W",
+  "W--W--W--W--WWWW--W--W--WWWW--WWWWWWWWWWWWWWWW",
+  "W-----W--W--W-----W--W--W--------------W--W--W",
+  "W--W--WWWWWWW--WWWW--WWWWWWWWWWWWWWWW--W--W--W",
+  "W--W-----W--------------W--------------------W",
+  "W--W--W--WWWW--WWWW--W--WWWWWWWWWWWWWWWW--W--W",
+  "W--W--W-----W-----W--W--------------------W--W",
+  "WWWWWWWWWW--WWWWWWWWWWWWWWWW--WWWWWWW--WWWW--W",
+  "W-----W--------W--W--W-----------W-----W--W--W",
+  "W--WWWW--WWWW--W--W--WWWW--WWWW--WWWWWWW--WWWW",
+  "W-----------W--W--------W-----W--------W-----W",
+  "W--WWWW--WWWW--WWWWWWW--WWWW--W--WWWW--W--WWWW",
+  "W--W--------W--------W-----W--W--W--W--------W",
+  "W--W--WWWWWWWWWW--W--WWWW--W--WWWW--WWWWWWWWWW",
+  "W--W--------W-----W--------W-----W--W--------W",
+  "W--WWWWWWW--WWWWWWWWWWWWW--W--WWWW--WWWW--WWWW",
+  "W--W--------W-----------W--W--W--W-----W-----W",
+  "W--W--WWWW--WWWW--W--WWWWWWW--W--WWWW--W--WWWW",
+  "W--W--W--------W--W-----W--------W-----W-----W",
+  "W--W--W--------W--W-----W--------W-----W-----W",
+  "W--W--W--------W--W-----W--------W-----W-----W",
+  "WWWW--W--WWWW--WWWW--WWWWWWW--WWWW--WWWW--WWWW",
+  "W-----W-----W-----W--------------W--W--W--W--W",
+  "WWWW--W--WWWWWWW--W--WWWW--WWWW--W--W--W--W--W",
+  "W--W--W--------W--W-----W-----W--------W-----W",
+  "W--WWWWWWWWWW--WWWWWWW--WWWWWWWWWWWWWWWWWWW--W",
+  "W--W--------------------W--------W--W--------W",
+  "W--W--W--WWWW--W--WWWWWWWWWW--W--W--W--W--WWWW",
+  "W--W--W-----W--W-----------W--W--------W-----W",
+  "W--WWWW--WWWWWWWWWWWWWWWW--W--WWWWWWW--WWWW--W",
+  "W-----------------W-----------------W--W-----",
+  "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW--",
 ];
 
 /* Challenge 2
    Add appropriate classes to use as objects in your map.  Choose characters to represent these objects and position them on the map.   In Challenge 5 and 6, you will generate the map using the character representation of the objects you chose to place in the world. Get Creative!
 */
 
-let scene, wall, turn, turn2, spikes, pallets;
+let scene;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
-
-  new Wall(0, 0, 0);
-  new Turn(0, 0, -4);
   for(let r = 0; r < maze.length; r++){
-    /* Challenge 3
-      Choose a technique to traverse the each character in the string.
-    */ 
-    /* Challenge 4
-       Make an appropriate decision based on the characters you chose to enter 
-       in the maze.  Create an instance of the corresponding object.
-    */
+    let row = maze[r];
+    let cols = row.split("");
+    for(let c = 0; c < cols.length; c++){
+      if(cols[c] == "W"){
+        new Wall(c,4,r)
+      }
+
+
+
+}
+
   }
 
 })
