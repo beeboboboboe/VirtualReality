@@ -4,6 +4,6 @@ class Pallet{
         this.y=y;
         this.z=z;
         this.obj=document.createElement("a-box");
-
+        this.obj.setAttribute("","")
     }
 }

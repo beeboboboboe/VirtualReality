@@ -10,11 +10,13 @@
   <body>
     <a-scene>
       <a-assets>
-<img id="darkwall" src="dark-red-brick-wall-texture.jpg">
+<img id="apartment" src="HighRiseResidential0101_1_350.jpg">
+<img id="monster" src="New Project.png">
       </a-assets>
       <a-plane position="0 0 0" rotation="-90 0 0" width="150" height="150" color="#AAFFAA"></a-plane>
-      
-      
+      <a-box>
+      <a-box depth="20" width=".1" src="#monster"></a-box>
+      </a-box>
       <a-sky color="blue"></a-sky>
       <a-camera wasd-controls="acceleration: 100; fly: true" position=" 0 25 0">
       </a-camera>

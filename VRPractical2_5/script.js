@@ -59,9 +59,13 @@ window.addEventListener("DOMContentLoaded",function() {
     let cols = row.split("");
     for(let c = 0; c < cols.length; c++){
       if(cols[c] == "W"){
-        new Wall(c,4,r)
+        new Wall(c*2,4,r*2)
       }
-
+   else if(cols[c] == "s"){
+        new Spike(c*1.1,1,r);
+      }else if(cols[c]=="p"){
+        new Pallet(c,0,r)
+      }
 
 
 }
