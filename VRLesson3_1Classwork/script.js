@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded",function() {
     this.setAttribute("height",2);
   })
   //Task 4: Add another event to set the height of myBox back to 1 when the mouse is no longer on myBox
-myBox.addEventListener("mouseeave", function(){
+myBox.addEventListener("mouseleave", function(){
 this.setAttribute("height", "1");
 })
   //Task 5: Make  the the cylinder disappear when you click on it.  Set opacity to zero
