@@ -13,13 +13,14 @@
 <img id="apartment" src="HighRiseResidential0101_1_350.jpg">
 <img id="monster" src="Adobe Express - file.png">
 <img id="glassy" src="image.png">
+<img id="galaxy" src="image copy 2.png">
       </a-assets>
-      <a-plane position="0 0 0" rotation="-90 0 0" width="150" height="150" color="#AAFFAA"></a-plane>
+      <a-plane src="#glassy" position="0 0 0" rotation="-90 0 0" width="150" height="150" color="#AAFFAA"></a-plane>
       <a-entity position="150 130 -100" rotation="0 30 50">
       <a-box depth="200" width=".1" height="200" opacity=".9" src="#monster"></a-box>
       </a-entity>
       </a-box>
-      <a-sky repeat ="10, 10" src="#glassy"  repeat="10, 10"></a-sky>
+      <a-sky repeat ="4, 10" src="#galaxy"  repeat="10, 10"></a-sky>
       <a-camera wasd-controls="acceleration: 100; fly: true" position=" 0 25 0">
       </a-camera>
 </html>
