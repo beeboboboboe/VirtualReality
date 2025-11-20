@@ -12,15 +12,15 @@
 
 let maze = [
   "---WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",
-  "---W-----W--------W--------W-----------------W",
-  "W--W--W--W--WWWW--W--W--WWWW--WWWWWWWWWWWWWWWW",
-  "W-----W--W--W-----W--W--W--------------W--W--W",
+  "---W-----W--------W------ssW--------------sssW",
+  "WppW--WssW--WWWW--W--W--WWWW--WWWWWWWWWWWWWWWW",
+  "W-----WssWssW-----W--WssW--------------WssWssW",
   "W--W--WWWWWWW--WWWW--WWWWWWWWWWWWWWWW--W--W--W",
-  "W--W-----W--------------W--------------------W",
+  "W--W-----W--------------Wsssss---------------W",
   "W--W--W--WWWW--WWWW--W--WWWWWWWWWWWWWWWW--W--W",
-  "W--W--W-----W-----W--W--------------------W--W",
-  "WWWWWWWWWW--WWWWWWWWWWWWWWWW--WWWWWWW--WWWW--W",
-  "W-----W--------W--W--W-----------W-----W--W--W",
+  "WssW--W-----W---ssWssW--------------------W--W",
+  "WWWWWWWWWW--WWWWWWWWWWWWWWWW--WWWWWWWssWWWW--W",
+  "W--sssW--------W--W--W-----------Ws----W--WssW",
   "W--WWWW--WWWW--W--W--WWWW--WWWW--WWWWWWW--WWWW",
   "W-----------W--W--------W-----W--------W-----W",
   "W--WWWW--WWWW--WWWWWWW--WWWW--W--WWWW--W--WWWW",
@@ -28,21 +28,21 @@ let maze = [
   "W--W--WWWWWWWWWW--W--WWWW--W--WWWW--WWWWWWWWWW",
   "W--W--------W-----W--------W-----W--W--------W",
   "W--WWWWWWW--WWWWWWWWWWWWW--W--WWWW--WWWW--WWWW",
-  "W--W--------W-----------W--W--W--W-----W-----W",
+  "W--W--------W-----------W--W--WssW-----W-----W",
   "W--W--WWWW--WWWW--W--WWWWWWW--W--WWWW--W--WWWW",
-  "W--W--W--------W--W-----W--------W-----W-----W",
-  "W--W--W--------W--W-----W--------W-----W-----W",
-  "W--W--W--------W--W-----W--------W-----W-----W",
+  "W--W--W--------W--W-----Wss------W-----W-----W",
+  "W--W--W--------W--W-----Wss------W-----W-----W",
+  "WssW--W--------W--W-----Wss------W-----W-----W",
   "WWWW--W--WWWW--WWWW--WWWWWWW--WWWW--WWWW--WWWW",
-  "W-----W-----W-----W--------------W--W--W--W--W",
-  "WWWW--W--WWWWWWW--W--WWWW--WWWW--W--W--W--W--W",
-  "W--W--W--------W--W-----W-----W--------W-----W",
+  "Wss---W-----W-----W--------------W--W--W--W--W",
+  "WWWW--W--WWWWWWW--W--WWWW-sWWWW--W--W--W--W--W",
+  "WssW--W--------W--W-----Ws-s--W--------W-----W",
   "W--WWWWWWWWWW--WWWWWWW--WWWWWWWWWWWWWWWWWWW--W",
-  "W--W--------------------W--------W--W--------W",
-  "W--W--W--WWWW--W--WWWWWWWWWW--W--W--W--W--WWWW",
-  "W--W--W-----W--W-----------W--W--------W-----W",
+  "W--W--------------------W--------WssW--------W",
+  "W--W--W--WWWW--W--WWWWWWWWWW--W--WssW--W--WWWW",
+  "W--W--W----sWssW-----------W--Wss------W-----W",
   "W--WWWW--WWWWWWWWWWWWWWWW--W--WWWWWWW--WWWW--W",
-  "W-----------------W-----------------W--W-----",
+  "W---------------ssW-----------------WssW-----",
   "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW--",
 ];
 
@@ -52,6 +52,7 @@ let maze = [
 */
 
 let scene;
+
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
@@ -63,9 +64,9 @@ window.addEventListener("DOMContentLoaded",function() {
         new Wall(c*2,4,r*2)
       }
    else if(cols[c] == "s"){
-        new Spike(c*1.1,1,r);
+        new Spike(c*2,1,r*2);
       }else if(cols[c]=="p"){
-        new Pallet(c,0,r)
+        new Pallet(c*2,2,r*2)
       }
 
 
