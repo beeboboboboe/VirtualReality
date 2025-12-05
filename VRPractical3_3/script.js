@@ -1,21 +1,26 @@
 let rnd = (l,u) => Math.random() * (u-l) + l
-let scene, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0;
+let scene, snowman, ammo, camera, bullet, enemies = [], ammo_boxes = [], ammo_count = 3, enemy_killed = 0;
 
 window.addEventListener("DOMContentLoaded",function() {
   scene = document.querySelector("a-scene");
   camera = document.querySelector("a-camera");
 
+  ammo = new Ammo(0, 0, 0);
+  
   window.addEventListener("keydown",function(e){
     //User can only fire with they press the spacebar and have sufficient ammo
     if(e.key == " " && ammo_count > 0  ){
       bullet = new Bullet();
       ammo_count--;
     }
+
   })
   
   setTimeout(loop,100);
   setTimeout(countdown,100);
 })
+
+
 
 function loop(){
   if(bullet){

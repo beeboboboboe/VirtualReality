@@ -20,15 +20,13 @@ let u = new Ufo(x, 20, z);
 ufos.push(u);
 }
 
-
-
-
-
   loop();
 })
 
 
 function loop(){
-
+for(let r of rockets){
+  r.launch();
+}
   window.requestAnimationFrame( loop );
 }
