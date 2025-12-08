@@ -1,10 +1,10 @@
 class Ufo{
 constructor(x,y,z){
 this.x = x;
-this.y = y;
 this.z = z;
 this.y = 20;
-this.dy = rnd(-1,-4)/10000;
+this.dy = -.1;
+
 
 this.obj = document.createElement("a-entity");
 
@@ -38,14 +38,20 @@ hatch.setAttribute("color", "#33FF66");
 hatch.setAttribute("position", "0 .3 0");
 this.obj.append( hatch );
 
+this.obj.addEventListener("click",()=>{
+    this.down = true;
+    console.log("hi")
+    })
+
 
 scene.append( this.obj );
 this.obj.setAttribute("position", {x:x, y:y, z:z});
 
 }
-invade(){
+    invade(){
+    if( this.down ){
 this.y+=this.dy;
 this.obj.setAttribute("position", {x:this.x, y:this.y, z:this.z})
+    }
 }
-
 }

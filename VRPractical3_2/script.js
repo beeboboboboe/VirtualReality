@@ -26,7 +26,14 @@ ufos.push(u);
 
 function loop(){
 for(let r of rockets){
-  r.launch();
+r.launch();
+
 }
+
+for(let u of ufos){
+u.invade();
+
+}
+
   window.requestAnimationFrame( loop );
 }
