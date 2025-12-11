@@ -31,3 +31,10 @@ function loop(){
    Create a function to turn off the cameras in all the balls. This 
    is needed for the rest of the challenges.
 */
+function off(){
+for(let ball of balls){
+
+
+}
+
+}
