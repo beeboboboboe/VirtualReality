@@ -14,7 +14,9 @@
   <a-plane static-body color="green" rotation="-90 0 0" side="double" width="50" height="50" opacity="0.5"></a-plane>
 
   <!-- Challenge 3: Add some static-body components for you and the balls to bump into -->
-
+  <a-box position="4 1 -10" static-body color="blue" depth="2" width="2" height="2"></a-box>
+    <a-box position="0 1 -10" static-body color="red" depth="2" width="2" height="2"></a-box>
+    <a-sphere position="-4 2 -9" static-body color="green" radius="2"></a-sphere>
   <a-entity id="cameraRig" movement-controls="fly: true; speed: 0.7" position="0 1.6 0">
     <a-camera id="camera" kinema-body="radius: 0.8">
       <a-cursor></a-cursor>
