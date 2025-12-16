@@ -10,14 +10,15 @@
         <!-- Challenge
              Preload the dragonBreathe and fireball sounds
         -->
-
+<a-audio src="dragonBreathe.wav" id="dragonBreathe" preload="auto"></a-audio>
+<a-audio src="fireball.wav" id="fireball" preload="auto"></a-audio>
       </a-assets>
       <!-- Challenge
            Associate the dragonBreathe with the sphere below
            such that it plays once for each interaction.
            Hint: Think loop.
       -->
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-sphere sound="src:#boom" loop="false"  position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
 
       <a-plane position="0 0 -4" rotation="-90 0 0" width="40" height="40" color="#7BC8A4"></a-plane>
 
